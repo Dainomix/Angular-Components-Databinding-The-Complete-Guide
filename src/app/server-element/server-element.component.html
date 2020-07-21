@@ -1,9 +1,13 @@
 <div class="panel panel-default">
     <div class="panel-heading">{{ element.name }}</div>
     <div class="panel-body">
-        <p>
+        <!-- Render the content: serves as hook i can place in my component to mark the place for Angular
+        Where it should add any content it finds between opening and closing tag <app-server-element></app-server-element>
+        => projected into my server element componenet  -->
+        <ng-content></ng-content>
+        <!-- <p>
             <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
             <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
-        </p>
+        </p> -->
     </div>
 </div>
